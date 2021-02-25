@@ -1,11 +1,15 @@
-*{
+html, *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .header{
    background-image: url("images/header__phone.png"); 
    height: 100vh;
    background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 .header__top{
     display: flex;
@@ -60,7 +64,7 @@ span.active{
     line-height: 49px;
     text-align: center;
     color: #FFFFFF;
-    margin-top: 320px;
+    
 }
 .header__btn{
     width: 261px;
@@ -71,7 +75,8 @@ span.active{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
     font-size: 18px;
     line-height: 21px;
@@ -83,11 +88,28 @@ span.active{
     margin-top: 39px;
 }
 .header__images{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    
 }
-.header__images span{
+
+.header__images div{
+    height: 100%;
+    width: 190px;
+    position: relative;
+    
+}
+.header__images div div{
     border-left: 1px solid #FFFFFF;
-    padding-top: 30px;
+    width: 20px;
+    height: 40px;
+    
+    position: absolute;
+    top: 10px;
+    right: 0;
+   
 }
 .measure{
     background: #F9F9F9;
@@ -140,6 +162,7 @@ span.active{
     border: 1px solid #D6D6D6;
     margin-left: 20px;
     margin-top: 6px;   
+    
 }
 .husband__btn,
 .wife__btn,
@@ -154,15 +177,30 @@ span.active{
     display: flex;
     justify-content: center;
     align-items: center; 
+    background: white;
 }
 .measure__images{
     text-align: center;
     margin-top: 55px;
     position: relative;
 }
-.measure__images img{
-    margin-left: 30px;
+.measure__images div{
+    position: relative;
 }
+
+.measure__images span{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    color: white;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    
+}
+
+
+
+
 .measure__images img:nth-child(4){
     margin-top: 30px;
 }
@@ -263,11 +301,24 @@ span.active{
     margin-top: 15px;
 }
 .social__images{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 60px;
+    flex-direction: column;
 }
+
+.social-images__left,
+.social__images__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .social__images img{
-    margin-left: -4px;
+    border: none;
+    display: block;
 }
 
 
